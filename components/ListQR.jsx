@@ -33,7 +33,7 @@ const ListQR = () => {
 
     return (
         <View style={listStyles.safeArea}>
-            <View>
+            <View style={listStyles.textWraper}>
                 <Text style={listStyles.text} >Your QR List</Text>
             </View>
             <Separator/>

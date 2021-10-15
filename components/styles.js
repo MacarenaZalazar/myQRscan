@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native"
 
 export const listStyles = StyleSheet.create({  
     text:{
-        marginTop:50,
+        marginTop:40,
         marginBottom:15,
         alignSelf:'center',
         fontSize: 45,
@@ -13,7 +13,6 @@ export const listStyles = StyleSheet.create({
     safeArea:{
         flex:0,
         alignContent:'center',
-        justifyContent:  'center',
         height: '100%',
         backgroundColor: '#a8b4a5',
     },
@@ -50,22 +49,23 @@ export const listStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         marginTop: 10
-    }
+    },
+    textWraper:{
+       // backgroundColor: '#ddfff7'
+    },
 }); 
 
 export const displayStyles = StyleSheet.create({  
     separator: {
-        marginVertical: 8,
+        
         borderBottomColor: '#737373',
         borderBottomWidth: StyleSheet.hairlineWidth,
     },
     bigContainer: {
         flex: 0,
-        width: '80%',
+        width: '100%',
         alignItems:'center',
         justifyContent: 'center',
-        flexGrow: 0,
-        backgroundColor: 'white',
         borderRadius: 15,  
 
     },
@@ -75,6 +75,7 @@ export const displayStyles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center',
         flexGrow: 0,
+        marginTop: 10
            
         
       },
@@ -85,7 +86,7 @@ export const displayStyles = StyleSheet.create({
       }, 
       item:{
         margin: 1,
-        backgroundColor: 'yellow'
+        fontSize: 18
       }
 }); 
 

@@ -42,7 +42,7 @@ const ReadQR = () => {
         />
         <View style={readStyles.button}>
         {scanned ? <Button title={'Tap to Scan Again'} color='black' onPress={() => setScanned(false)} />
-        : <Ionicons name="md-scan-outline" size={180} color='white'/>}
+        : <Ionicons name="md-scan-outline" size={200} color='white'/>}
           </View> 
         </View>
 
