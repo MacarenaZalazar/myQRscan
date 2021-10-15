@@ -1,10 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import { Text, View, StyleSheet, Button  } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import { useDispatch } from 'react-redux';
+import { saveQR } from '../redux/actions';
+import { Ionicons } from '@expo/vector-icons';
+import { readStyles } from './styles';
+
 
 const ReadQR = () => {
     const [hasPermission, setHasPermission] = useState(null);
     const [scanned, setScanned] = useState(false);
+    const dispatch = useDispatch()
+
     useEffect(() => {
       (async () => {
         const { status } = await BarCodeScanner.requestPermissionsAsync();
@@ -14,6 +21,7 @@ const ReadQR = () => {
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
+    dispatch(saveQR(data))
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
   };
   if (hasPermission === null) {
@@ -27,29 +35,20 @@ const ReadQR = () => {
 
     return (    
     
-        <View style={styles.container}>
+        <View style={readStyles.container}>
         <BarCodeScanner
             onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
             style={StyleSheet.absoluteFillObject}
         />
-        {scanned && 
-        <View style={styles.button}>
-            <Button title={'Tap to Scan Again'} color='black' onPress={() => setScanned(false)} />
-        </View>}
+        <View style={readStyles.button}>
+        {scanned ? <Button title={'Tap to Scan Again'} color='black' onPress={() => setScanned(false)} />
+        : <Ionicons name="md-scan-outline" size={180} color='white'/>}
+          </View> 
         </View>
 
     );
 };
 
-const styles = StyleSheet.create({  
-    container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-button:{
-    alignItems:'center',
-    justifyContent: 'center',
-}}); 
+
 
 export default ReadQR;
