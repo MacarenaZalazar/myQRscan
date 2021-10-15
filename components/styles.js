@@ -3,19 +3,26 @@ import { StyleSheet } from "react-native"
 export const listStyles = StyleSheet.create({  
     text:{
         marginTop:50,
+        marginBottom:15,
         alignSelf:'center',
         fontSize: 45,
     },
+    smallText: {
+        padding: 10
+    },  
     safeArea:{
+        flex:0,
+        alignContent:'center',
+        justifyContent:  'center',
         height: '100%',
         backgroundColor: '#a8b4a5',
     },
     container: {
         flex: 0,
         alignItems:'center',
-        flexDirection: 'column',
+        flexDirection: 'row',
         justifyContent: 'center',
-        marginHorizontal: 10      },
+        marginTop: 10},
       textContainer: {
         flex: 0,
         justifyContent: 'center',
@@ -33,12 +40,16 @@ export const listStyles = StyleSheet.create({
         borderColor:'grey',
         padding: 10,
       },
-    button:{},
+    button:{
+        flex:0,
+        alignContent:'center',
+    },
     formContainer:{
         flex: 0,
+        alignItems:'center',
         flexDirection: 'row',
-        alignContent: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: 10
     }
 }); 
 
@@ -48,12 +59,23 @@ export const displayStyles = StyleSheet.create({
         borderBottomColor: '#737373',
         borderBottomWidth: StyleSheet.hairlineWidth,
     },
-    container: {
+    bigContainer: {
         flex: 0,
-        padding: 20,
+        width: '80%',
         alignItems:'center',
         justifyContent: 'center',
-        flexGrow: 0
+        flexGrow: 0,
+        backgroundColor: 'white',
+        borderRadius: 15,  
+
+    },
+    container: {
+        flex: 0,
+        width: '80%',
+        alignItems:'center',
+        justifyContent: 'center',
+        flexGrow: 0,
+           
         
       },
       textContainer: {

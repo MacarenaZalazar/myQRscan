@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Text, View, StyleSheet, Button  } from 'react-native';
+import { Alert, View, StyleSheet, Button, Text } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { useDispatch } from 'react-redux';
 import { saveQR } from '../redux/actions';
@@ -22,13 +22,13 @@ const ReadQR = () => {
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
     dispatch(saveQR(data))
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    Alert.alert(`Bar code with type ${type} and data ${data} has been scanned!`);
   };
   if (hasPermission === null) {
-    return <Text>Requesting for camera permission</Text>;
+    return <Text>Requesting for camera permission</Text>
   }
   if (hasPermission === false) {
-    return <Text>No access to camera</Text>;
+    return <Text>No access to camera</Text>
   }
 
 
