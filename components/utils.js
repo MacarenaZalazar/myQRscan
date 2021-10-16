@@ -15,7 +15,6 @@ export const Item = ({url}) => {
                 [
                   {
                     text: "Cancel",
-                    onPress: () => console.log("Cancel Pressed"),
                     style: "cancel"
                   },
                   { text: "OK", onPress: async () => Linking.openURL(url) }
