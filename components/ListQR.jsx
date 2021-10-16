@@ -33,13 +33,13 @@ const ListQR = () => {
 
     return (
         <View style={listStyles.safeArea}>
-            <View style={listStyles.textWraper}>
+            <View>
                 <Text style={listStyles.text} >Your QR List</Text>
             </View>
             <Separator/>
             <View>
                 <View style={listStyles.container} >
-                    <TextInput style={listStyles.input} name={'filter'} value={input} placeholder={'search QR'} onChangeText={(val) => handleChange(val)} />
+                    <TextInput style={listStyles.input} name={'filter'} value={input} placeholder={'key word...'} onChangeText={(val) => handleChange(val)} />
                     <Button  style={listStyles.button} color='black' disabled={input? false : true} title={'SEARCH'} onPress={handlePress} />
                     <View>
                 </View>

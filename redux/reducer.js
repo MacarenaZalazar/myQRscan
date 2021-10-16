@@ -13,9 +13,13 @@ export default reducer = (state = initialState, action) =>{
     const {type, payload} = action
     switch(type){
         case SAVE_QR:
-            return {
-                ...state,
-                allQRS: [...state.allQRS, payload]
+            if(!state.allQRS.includes(payload)){
+                return {
+                    ...state,
+                    allQRS: [...state.allQRS, payload]
+                }
+            } else {
+                return state
             }
         case FILTER_QR:
             if(payload) {

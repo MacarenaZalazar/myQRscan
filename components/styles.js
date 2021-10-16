@@ -17,28 +17,29 @@ export const listStyles = StyleSheet.create({
         backgroundColor: '#a8b4a5',
     },
     container: {
+        marginTop: 5,
         flex: 0,
         alignItems:'center',
         flexDirection: 'row',
         justifyContent: 'center',
         marginTop: 10},
-      textContainer: {
+    textContainer: {
         flex: 0,
         justifyContent: 'center',
         alignContent: 'center'
-      },
-      flat:{
+    },
+    flat:{
         flex: 0,
         justifyContent: 'center'
       
-      },
-      input: {
+    },
+    input: {
         width: 150,
         margin: 12,
         borderWidth: 1,
         borderColor:'grey',
         padding: 10,
-      },
+    },
     button:{
         flex:0,
         alignContent:'center',
@@ -50,9 +51,7 @@ export const listStyles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 10
     },
-    textWraper:{
-       // backgroundColor: '#ddfff7'
-    },
+
 }); 
 
 export const displayStyles = StyleSheet.create({  
@@ -84,21 +83,60 @@ export const displayStyles = StyleSheet.create({
         justifyContent: 'center',
         alignContent: 'center'
       }, 
-      item:{
+    item:{
+        textDecorationLine: 'underline',
         margin: 1,
         fontSize: 18
-      }
+    }
 }); 
 
 export const readStyles = StyleSheet.create({  
     container: {
-    height: '100%',
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundColor: '#737373',
-  },
-button:{
-    alignItems:'center',
-    justifyContent: 'center',
-}}); 
+        height: '100%',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        backgroundColor: '#737373',
+    },
+    button:{
+        alignItems:'center',
+        justifyContent: 'center',
+    }
+});
+
+export const tabStyles = StyleSheet.create({  
+    container: {
+        flex: 0,
+        alignItems:'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+      },
+    input: {
+        height: 40,
+        width: 80,
+        margin: 12,
+        borderWidth: 1,
+        borderColor:'grey',
+        padding: 10,
+    },
+    button:{
+        margin:10,
+    },  
+    tabBar:{
+        display: 'flex', 
+        position: 'absolute', 
+        bottom: 25,
+        height: 60,
+        left: 20,
+        right: 20, 
+        borderRadius: 15,
+        shadowColor: '#000',
+        shadowOpacity: 0.08,
+        shadowOffset:{
+            width: 10,
+            height: 10
+        } 
+    },
+    tab: {
+        backgroundColor: '#a8b4a5',
+    }}); 
