@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-nicasourse",
-    "slug": "react-native-nicasourse",
+    "name": "MyQRscan",
+    "slug": "MyQRscan",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
