@@ -36,8 +36,7 @@ const ListQR = () => {
     return (
         <View style={listStyles.safeArea}>
             <View>
-                <Image source={require('../assets/myqrtitle.')}/>
-                <Text style={listStyles.text} >My QR  <MaterialCommunityIcons name="qrcode-scan" size={24} color="black" /> List</Text>
+                <Text style={listStyles.text} >My QR List</Text>
             </View>
             <Separator/>
             <View>
