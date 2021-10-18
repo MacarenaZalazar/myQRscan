@@ -4,7 +4,7 @@
     "slug": "MyQRscan",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/qricon.png",
     "splash": {
       "image": "./assets/mysplashQR.png",
       "resizeMode": "contain",

@@ -5,7 +5,7 @@ const initialState = {
     filteredQRS: []
 }
 
-export default reducer = (state = initialState, action) =>{
+const reducer = (state = initialState, action) =>{
     const {type, payload} = action
     switch(type){
         case SAVE_QR:
@@ -27,3 +27,5 @@ export default reducer = (state = initialState, action) =>{
             return state
     }
 }
+
+export default reducer;

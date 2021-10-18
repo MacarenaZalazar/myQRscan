@@ -35,8 +35,7 @@ const ListQR = () => {
     return (
         <View style={listStyles.safeArea}>
             <View>
-                <Image style={{width: 100}} source={require('@expo/assets/icon.png')}/>
-                <Text style={listStyles.text} >My QR List</Text>
+               <Text style={listStyles.text} >My QR</Text>
             </View>
             <Separator/>
             <View>
