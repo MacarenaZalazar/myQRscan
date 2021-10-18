@@ -5,7 +5,6 @@ import {useSelector, useDispatch} from 'react-redux'
 import DisplayList from './DisplayList';
 import { Separator } from './utils';
 import { listStyles } from './styles';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 const ListQR = () => {
@@ -36,6 +35,7 @@ const ListQR = () => {
     return (
         <View style={listStyles.safeArea}>
             <View>
+                <Image style={{width: 100}} source={require('@expo/assets/icon.png')}/>
                 <Text style={listStyles.text} >My QR List</Text>
             </View>
             <Separator/>

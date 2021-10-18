@@ -6,6 +6,7 @@ export const listStyles = StyleSheet.create({
         marginBottom:15,
         alignSelf:'center',
         fontSize: 45,
+        // fontFamily:'OCRA-A-Std'
     },
     smallText: {
         padding: 10
