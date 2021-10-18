@@ -6,6 +6,7 @@ export const listStyles = StyleSheet.create({
         marginBottom:15,
         alignSelf:'center',
         fontSize: 45,
+        // fontFamily:'OCRA-A-Std'
     },
     smallText: {
         padding: 10
@@ -101,6 +102,12 @@ export const readStyles = StyleSheet.create({
     button:{
         alignItems:'center',
         justifyContent: 'center',
+    },
+    loading:{
+        alignContent: 'center',
+        justifyContent: 'center',
+        height: '100%',
+        backgroundColor: '#a8b4a5'
     }
 });
 

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, TextInput, Button, SafeAreaView} from 'react-native';
+import { Text, View, TextInput, Button, Image} from 'react-native';
 import {filterQR} from '../redux/actions';
 import {useSelector, useDispatch} from 'react-redux'
 import DisplayList from './DisplayList';
 import { Separator } from './utils';
 import { listStyles } from './styles';
+
 
 const ListQR = () => {
     const [input, setInput] = useState('')
@@ -34,7 +35,8 @@ const ListQR = () => {
     return (
         <View style={listStyles.safeArea}>
             <View>
-                <Text style={listStyles.text} >Your QR List</Text>
+                <Image style={{width: 100}} source={require('@expo/assets/icon.png')}/>
+                <Text style={listStyles.text} >My QR List</Text>
             </View>
             <Separator/>
             <View>
