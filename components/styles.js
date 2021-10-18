@@ -101,6 +101,12 @@ export const readStyles = StyleSheet.create({
     button:{
         alignItems:'center',
         justifyContent: 'center',
+    },
+    loading:{
+        alignContent: 'center',
+        justifyContent: 'center',
+        height: '100%',
+        backgroundColor: '#a8b4a5'
     }
 });
 

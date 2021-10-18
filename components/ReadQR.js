@@ -33,16 +33,18 @@ const ReadQR = () => {
   };
   if (hasPermission === null) {
     return (
-    <View>
-      <Text>Requesting for camera permission</Text>
+    <View style={readStyles.loading} >
+      <Text style={{alignSelf:'center'}}>Requesting for camera permission</Text>
     </View>
     )
   }
   if (hasPermission === false) {
     return (
-    <View>
-      <Text>No access to camera</Text>
-      <Button color='white' title={'Allow Camera'} onPress={()=> allowCameraPermition()} />
+    <View style={readStyles.loading} >
+      <Text style={{alignSelf:'center', fontSize: 25, marginBottom: 15}}>No access to camera</Text>
+      <View style={readStyles.button}>
+        <Button color={ Platform.OS === 'ios' ? 'white' :'black'} title={'Allow Camera'} onPress={()=> allowCameraPermition()} />
+      </View>
     </View>
     )
   }
@@ -55,7 +57,7 @@ const ReadQR = () => {
             style={StyleSheet.absoluteFillObject}
         />
         <View style={readStyles.button}>
-        {scanned ? <Button title={'Tap to Scan Again'} color={ Platform.OS === 'ios' ? 'white' :'black'}onPress={() => setScanned(false)} />
+        {scanned ? <Button title={'Tap to Scan Again'} color={ Platform.OS === 'ios' ? 'white' :'black'} onPress={() => setScanned(false)} />
         : <Ionicons name="md-scan-outline" size={200} color='white' />}
           </View> 
         </View>
