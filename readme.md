@@ -2,7 +2,7 @@
 
 #### This app will scan and store QRs 
 
-#### To run it in your mobile device, you'll need to download the app Expo Go from your App Store, and access this link https://expo.io/@macarena.zalazar/MyQRscan
+#### To run it in your mobile device with Android, you'll need to download the app Expo Go from your App Store, and access this link https://expo.io/@macarena.zalazar/MyQRscan
 
 #### To run it in your computer, do the following in the command line
 
